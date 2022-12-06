@@ -1,0 +1,258 @@
+:root{
+--higlight: #af5d00;
+--nav: #f3f2ec;
+--background: #d3c8b2;
+--mobilenav: #615146;
+}
+
+body{
+    background-image: url(/images/back.jpeg);
+    background-size: cover;
+    background-color: var(--background);
+    margin:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    background: var(--nav);
+    padding: 1em ;
+
+    .logo{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.2em;
+
+    span{
+        color: var(--higlight);
+    }
+    }
+
+}
+
+
+.container{
+    display: flex;
+    place-content: space-between;
+    
+}
+
+nav{
+    display: none;
+}
+
+nav{
+    position: fixed;
+    z-index: 999;
+    width: 66%;
+    opacity: 95%;
+    right: 0;
+    top: 0;
+    background-color: var(--mobilenav);
+    height: 100vh;
+    padding: 1em;
+
+    ul.primary-nav{
+        margin-top: 5em;
+
+    }
+
+}
+.mobile-menu{
+    cursor:pointer;
+    margin-right: 2em;
+}
+
+nav.menu-btn{
+    display: block;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+li{
+    a{
+        color: white;
+        font-size: large;
+        text-decoration: none;
+        display: block;
+        padding: .5em;
+        text-align: right;
+
+        &:hover{
+            font-weight: bold;
+        }
+    }
+
+}
+
+
+.mobile-menu-exit{
+    float: right;
+    margin: .5em;
+    cursor: pointer;
+
+    &:hover{    
+        width: 1.4em;
+    }
+}
+
+.page img{
+    height: auto;
+    width: fill;
+    padding: none;
+    margin: none;
+}
+
+p{
+    text-align: justify;
+}
+
+.p-box{ 
+    background-color: var(--background);
+    padding: 1em;
+}
+
+.page{margin-top: 3em;}
+
+@media only screen and (min-width: 770px)
+
+{
+    .p-box{
+        background-color: var(--background);
+        opacity: 90%;
+        transform: translateX(50px);
+    }
+    .best-sellers{
+        .p-box{
+            height: 16em;
+            transform: translateX(0px);
+            z-index: 1;
+        }
+        .left{transform: translateX(80px);}
+        .right{transform: translateX(-80px);}
+    }
+    
+    
+    .latas{
+        transform: translateX(100px);}
+
+    .latas img{
+    animation: enterleft 1.5s;
+    z-index: -1;    
+    }
+    
+    .resultados img{
+        animation: enterright 1.5s;
+        transform: translate(100px);
+    }
+    
+    .about-us{
+        img{
+        transform: translate(100px);}
+        .p-box{transform: translate(50px,-70px);}
+    }
+
+    .mobile-menu, .mobile-menu-exit, .home{
+        display: none;}
+
+        .navbar.container{
+            display: grid;
+            grid-template-columns: 180px auto;
+            justify-content: unset;
+        }
+        .navbar nav{
+            display: flex;
+            justify-content: space-between;
+            background: none;
+            position: unset;
+            height: auto;
+            width: 100%;
+            padding: 0;
+
+            ul{
+                display: flex;
+            }
+            a{
+                color: black;
+                font-size: 1em;
+                padding: .1em 1em;
+            }
+
+            ul.primary-nav{
+            padding-left: 0.8em;
+            margin: 0;
+            }
+
+            li.current a{
+                font-weight: bold;
+            }
+
+            li.about-us-button a{
+                
+                color: var(--higlight);
+                background: var(--nav);
+                border: 3px solid var(--higlight);
+                font-weight: bold;
+                border-radius: 1em;
+                margin-top: -.2em;
+                margin-right: 2em;
+
+                &:hover{
+                    border: 3px solid var(--higlight);
+                    background: var(--higlight);
+                    color: var(--nav);    
+                }
+            }
+        }
+
+        img{                
+            max-width: 30%;
+            height:auto;
+            padding: 3em 0.5em;
+        }
+
+        .resultados , .about-us, .best-sellers, .latas{
+            display: flex;
+        }
+
+        .p-box{
+            
+            background-color: var(--nav);
+            height: 12em;
+            width: 50%;
+            max-height: 20%;
+            padding: 1em;
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+
+            overflow:auto;
+        }
+        
+        .about-us{
+            background-color: var(--background);
+            
+        }
+ 
+    }
+
+    @keyframes enterleft{
+        from{transform: translateX(+500px);}
+        to{transform: translateX(0px);}
+
+    }
+
+    @keyframes enterright{
+        from{transform: translateX(-400px);}
+        to{transform: translateX(100px);}
+    }

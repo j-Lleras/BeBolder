@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bolder</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div class="navbar">
+            <div class="container">
+            <a class="logo" href="#">Be<span>Bolder</span></a>
+
+                <img id="mobile-cta" class= "mobile-menu" src="images/menu.svg" alt="open navbar">
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close navbar">
+            <ul class="primary-nav">
+                <li class="home"><a href="#">Home</a></li> 
+                <li ><a href="#">Shop</a></li>
+                <li><a href="#best-sellers">Best Sellers</a></li>
+            </ul>
+
+            <ul class="secondary-nav">
+                <li class="about-us-button"><a href="#about-us">AboutUs</a></li>
+            </ul>
+        </nav>
+            </div>
+
+        </div>
+
+        
+        <div class ="page">
+            <div class="latas" >
+                <div class="p-box">
+                <p>Latas fabricadas con un 0% de residuos plásticos y metal de alta calidad que permite reutilizarlas cientos de veces. 
+                    Pintura con base de agua que elimina por completo olores desagradables pero asegura una covertura completa del color en prácticamente cualquier material.
+                    Un cabezal principal con un dispersor preciso para acabados detallados y un segudo cabezal con dispersor de volumen completamente gratuito.
+                    <br><br> 
+                    Todo esto hace de nuestras latas las mejores del mercado. Sin mencionar el amplio abanico de colores del que disponemos.
+                </p>
+                    </div>
+                <img  src="images/restos_latas.png" alt="muestra de latas">
+            </div>
+
+            <div class="resultados">
+                <img src="images/Graffit_sample.png" alt="muestra de resultados">
+                <div class="p-box">
+                <p>Nuestros brillantes colores destacan sobre todos los fondos a la primera pasada, dejando un acabado impecable en degradados.
+                    Los diversos tonos permiten transiciones elaboradas para que puedas dejar fluir toda tu creatividad.
+                    <br><br>La gama de colores solid se secan rápido opacando por completo el fondo mientras que la gama fluid permite jugar con los
+                     colores para crear efectos impactantes y sombras increíbles.
+                    <br><br> Nuestos brillantes resultados ya inundan las calles de USA, España y Francia. Unete a nosotros y haz de la ciudad una obra de arte.
+                </p> 
+            </div></div>
+
+            <div class="best-sellers" id="best-sellers">
+                <img  src="images/lata_sample2.png" alt="best selling can" class="left">
+                <div class="p-box">
+                    <p>Como culaquiera hubiera podido anticipar, nuestro aerosol solid negro es no solo el más vendido de nuestros productos, sino también uno de los 
+                        más vendidos de entre todas las marcas. Un negro mate que resalta los bordes del lettering como ningun otro y con 600ml para llenar
+                        cientos de paredes con tus mejores obras. 
+                        <br><br>
+                        Nuestro blanco solid marfil tampoco se queda atrás. Usado en cientos de calles, ha llenado las obras de luz y brillo.
+                        <br><br>
+                        100 latas de cada uno fueron necesarias para nuestra exposición en Berlín "Efectos colaterales", que ha permitido a muchos artistas locales desarrollar 
+                        su creatividad exponiendo el sufrimiento de la ciudad a lo largo del siglo XX.
+                    </p>
+                    </div>
+                    <img  src="images/lata_sample2.png" alt="second best selling can" class="right">
+        </div>
+
+            <div class="about-us" id="about-us">
+                <img class= "image" src="images/hoody.png" alt="Foto del desarrollador">      <!-- cambiar la foto por una mía-->
+                <div class="p-box">
+                <p> BeBolder se ha ideado como una marca ficticia usada para la práctica y el aprendizaje.
+                    <br><br>Tanto el completo de la marca, como la página web y los diseños han sido desarrollados por Jaime Lleras, un joven estudiante del doble grado de Ingeniería de computadores y 
+                    diseño y desarrollo de videojugos en la Universidad RJC. 
+                    
+                </p>
+                <!--añadir labels para las skills-->
+            </div></div>
+        </div>
+
+        <script>
+            const mobileBtn= document.getElementById('mobile-cta')
+                nav =document.querySelector('nav');
+                mobileBtnExit = document.getElementById('mobile-exit');
+
+            mobileBtn.addEventListener('click', () => {
+                nav.classList.add('menu-btn');
+            });
+
+            mobileBtnExit.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            });
+
+        </script>
+
+    </body>    
+    
